@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>Adventure</title>
+		<style>
+			body
+			{
+				background-image:url('paradis.jpg');
+				background-color:#cccccc;
+			}
+			div
+			{
+				height: 70%;
+				width: 1000;
+				font-size: 30;
+				font-family: verdana;
+				overflow: auto;
+				position: relative;
+			}
+			input
+			{
+				height: 50;
+				font-size: 30;
+			}
+			#lego
+			{
+				padding-left:2em;
+			}
+			#bb
+			{
+				position: absolute;
+				bottom: 50;
+			}
+		</style>
+		<script>
+			function clicked()
+			{
+				window.location = "pag5g.html";
+			}
+			function clicke()
+			{
+				window.location = "pag5.html";
+			}
+			function back()
+			{
+				window.location = "start.html";
+			}
+		</script>
+	</head>
+
+	<body text = "blue">
+		<p><b><i><center><h1>Decizii</h1></center></i></b></p>
+			<center><div style="position:center; background-color:white; filter:alpha(opacity=60); opacity:.6; margin: 0 auto">
+				<span style="color:blue; filter:alpha(opacity=100); opacity:1;">
+					<br><p id = "lego">In excursie a fost foarte fain, chiar daca am cazut destul de rau, aveam casca, dar in rest a fost foarte frumos. La sfarsitul excursiei, in schimb am uitat sa imi fac temele, mai am ziua de duminica libera:</p>
+					<center>
+						<form>
+							<input type = "button" value = "Nu fac temele, e duminica!!!" onClick = "clicked()">
+							sau
+							<input type = "button" value = "Fac temele, chiar daca este duminica" onClick = "clicke()">
+						</form>
+						<form>
+								<input type = "button" value = "back" onClick = "back()">
+						</form>
+					</center>
+				</span>
+			</div></center>
+	</body>
+</html>

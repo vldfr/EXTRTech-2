@@ -1,0 +1,20 @@
+a{
+	text-decoration: none;
+	color: blue;
+}
+body{
+	background-image: linear-gradient(bottom, rgb(24,87,196) 30%, rgb(17,30,173) 74%, rgb(74,32,212) 59%);
+	background-image: -o-linear-gradient(bottom, rgb(24,87,196) 30%, rgb(17,30,173) 74%, rgb(74,32,212) 59%);
+	background-image: -moz-linear-gradient(bottom, rgb(24,87,196) 30%, rgb(17,30,173) 74%, rgb(74,32,212) 59%);
+	background-image: -webkit-linear-gradient(bottom, rgb(24,87,196) 30%, rgb(17,30,173) 74%, rgb(74,32,212) 59%);
+	background-image: -ms-linear-gradient(bottom, rgb(24,87,196) 30%, rgb(17,30,173) 74%, rgb(74,32,212) 59%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.3, rgb(24,87,196)),
+		color-stop(0.74, rgb(17,30,173)),
+		color-stop(0.59, rgb(74,32,212))
+);
+}
