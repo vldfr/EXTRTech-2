@@ -1,0 +1,100 @@
+<html>
+	<head>
+		<title>Start</title>
+		<style>
+			body
+			{
+				background-image:url('tech.jpg');
+				background-position:center;
+				position:relative;
+			}
+			i
+			{
+				font-size: 60;
+				color: white;
+				left: 540;
+			}
+			#lego
+			{
+				filter-alpha(70);
+				opacity: .7;
+				position: absolute;
+				height: 50;
+				font-size: 30;
+				bottom: 100;
+				left: 540;
+			}
+			#llego
+			{
+				position: absolute;
+				bottom: 100;
+				left: 650;
+			}
+			#kk
+			{
+				background-color: white;
+			}
+			#ll
+			{
+				position: absolute;
+				top: 50;
+				left: 450;
+			}
+			div
+			{
+				position: relative;
+			}
+		</style>
+		<script>
+			function clicked()
+			{
+				window.location = "start.html";
+			}
+			function google()
+			{
+				window.location = "http://www.google.com"
+			}
+			function clic()
+			{
+				window.location = "about.html"
+			}
+
+		</script>
+	</head>
+	
+	<body style = "background-image: c:/Users/Fara.BootCamp/Desktop/concurs/tech.jpg;">
+		<center id  = "ll"><p><i>Jocul deciziilor</i></p></center>
+		<div style="position:absolute; background-color:#66FF33; filter:alpha(opacity=60); opacity:.6; left:0; height: 100%; width: 200;">
+			<span style="color:blue; filter:alpha(opacity=100); opacity:1;">
+				<p id = "kk">Menu</p>
+				<input type = "button" class = "abc" value = "About" onClick = "clic()" style = "width:200;">
+				<style>
+				.abc
+			{
+				/* normal button style */
+				color: black;
+			}
+
+			.abc:hover
+			{
+				color: blue;
+			}
+				</style>
+			</span>
+		</div>
+		<input type="button" id = "lego" class="styled-button-10" value="begin" onClick = "clicked()"/>
+		<style type="text/css">
+			.styled-button-10
+			{
+				/* normal button style */
+				color: blue;
+			}
+
+			.styled-button-10:hover
+			{
+				color: #66FF33;
+			}
+</style>
+		<input id = "llego" type = "button" value = "google" onClick = "google()">
+	</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+div {
+  position:absolute;
+  background-color:#FF0000;
+  left:300px;
+  top: 500px;
+  width:90px;
+  height:90px;
+  margin:5px;
+  border-radius: 1000000px;
+}
+body{
+background-image:url('concrete2.jpg');
+}
+#up, #down, #left, #right, #ccolor, #reset, #plus, #minus{
+	height: 50px;
+}
+</style>
+  <script src="jquery.js"></script>
+</head>
+<body onLoad = "check()">
+<img src = "bugatti.png" alt = "lipsa" width = "300" height = "200" style = "top: 0; left: 0;">
+	<button id = "up" style = "position: absolute; right: 15px; bottom: 200px;">&uarr;</button>
+  <button id="left" style = "position: absolute; right: 30px; bottom: 150px;">&laquo;</button> <button id="right" style = "position: absolute; right: 0; bottom: 150px;">&raquo;</button>
+  <button id = "down" style = "position: absolute; right: 15px; bottom: 100px;">&#8595;</button></center>
+  <button id = "ccolor" style = "position: absolute; right: 50px; bottom: 50px;">color</button><button id = "reset" style = "position: absolute; right: 0; bottom: 50px;">reset</button>
+  <button id = "plus" style = "position: absolute; right: 40px; bottom: 0;">+</button><button id = "minus" style = "position: absolute; right: 0; bottom: 0;">-</button>
+<div class="block"><center><span style = " text-color: white;"></span></center></div>
+ 
+<script>
+
+var index = 0;
+var mycolors = new Array();
+	mycolors[0] = "red";
+	mycolors[1] = "blue";
+	mycolors[2] = "green";
+	mycolors[3] = "orange";
+	mycolors[4] = "pink";
+	mycolors[5] = "black";
+function check()
+{
+	if($(".block").position().top < 210 && $(".block").position().left < 310)
+	{
+		window.location = "sfarsit.html";
+	}	
+	setTimeout("check()",200);
+}
+$(document).keydown(function(e)
+{
+	if(e.keyCode == 82) //reset
+	{
+		$(".block").animate({"left": "300px"}, "fast");
+		$(".block").animate({"top": "500px"}, "fast");
+	}
+	
+	if(e.keyCode == 90)
+	{
+		$(".block").css("background-color", "#FF0000");
+	}
+	if(e.keyCode == 188)
+	{
+		$(".block").css("width", "-=20");
+		$(".block").css("height", "-=20");
+	}
+	if(e.keyCode == 190)
+	{
+		$(".block").css("width", "+=20");
+		$(".block").css("height", "+=20");
+	}
+	if(e.keyCode == 67) //ccolor
+	{
+		var color = mycolors[index % 6];
+		index = index + 1;
+		$(".block").css("background-color", color);
+	}
+	if(e.keyCode == 37) //left
+	{
+		$(".block").animate({"left": "-=30px"}, "fast");
+	}
+	if(e.keyCode == 38) //up
+	{
+		$(".block").animate({"top": "-=30px"}, "fast");
+	}
+	if(e.keyCode == 39) //right
+	{
+		$(".block").animate({"left": "+=30px"}, "fast");
+	}
+	if(e.keyCode == 40) //down
+	{
+		 $(".block").animate({"top": "+=30px"}, "fast");
+	}
+});
+$("#right").click(function(){
+	$(".block").animate({"left": "+=30px"}, "fast");
+});
+ $("#up").click(function(){
+	$(".block").animate({"top": "-=30px"}, "fast");
+});
+$("#down").click(function(){
+	$(".block").animate({"top": "+=30px"}, "fast");	
+});
+$("#left").click(function(){
+	$(".block").animate({"left": "-=30px"}, "fast");
+});
+$("#ccolor").click(function()
+{
+	var color = mycolors[index % 6];
+	index = index + 1;
+	$(".block").css("background-color", color);
+}
+);
+ $("#reset").click(function()
+{
+	$(".block").animate({"left": "300px"}, "fast");
+	$(".block").animate({"top": "300px"}, "fast");
+}
+);
+$("#plus").click(function()
+{
+	$(".block").css("width", "+=20");
+	$(".block").css("height", "+=20");
+}
+);
+$("#minus").click(function()
+{
+	$(".block").css("width", "-=20");
+	$(".block").css("height", "-=20");
+}
+);
+</script>
+ 
+</body>
+</html>
